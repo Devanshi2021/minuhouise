@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "183314551009",
+    "project_id": "minu-devanshi",
+    "storage_bucket": "minu-devanshi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183314551009:android:400d3b565227371445e7a0",
+        "android_client_info": {
+          "package_name": "com.devanshi.minu.housie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183314551009-ikt7ueb5s89g6d1uaruvooveo18bkkl4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh5DdQyrgr1a7yedLmnEKCtycIi32Ofig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183314551009-ikt7ueb5s89g6d1uaruvooveo18bkkl4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

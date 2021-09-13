@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/cl_main_game_item"
+    android:layout_height="@dimen/_140sdp"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/white_rounded_rectangle"
+        android:id="@+id/cl_game_more_details"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/_15sdp"
+        android:paddingEnd="@dimen/_2sdp"
+        android:paddingVertical="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            style="@style/game_recycler_heading_textview_style_black_color"
+            android:id="@+id/game_date_time"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_width="wrap_content"
+            tools:text="TUESDAY - 1PM"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/game_recycler_heading_textview_style_black_color"
+            android:id="@+id/txtGameDetailTicketPrize"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            android:text="@string/str_ticket_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            style="@style/game_recycler_heading_textview_style_black_color"
+            android:id="@+id/game_title"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_width="wrap_content"
+            tools:text="Purchased on: 26 May 20| 12:40 PM"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/game_date_time" />
+
+        <TextView
+            style="@style/game_recycler_heading_textview_style_black_color"
+            android:id="@+id/starts_at"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_width="wrap_content"
+            android:text="@string/played_on"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/game_title" />
+
+        <ImageView
+            android:id="@+id/img_calender"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_width="@dimen/_15sdp"
+            android:src="@drawable/ic_calender"
+            app:layout_constraintStart_toStartOf="@+id/starts_at"
+            app:layout_constraintTop_toBottomOf="@+id/starts_at"
+            android:contentDescription="@null" />
+
+        <TextView
+            style="@style/game_recycler_detail_textview_style_blue_color"
+            android:id="@+id/txtGameDetailDate"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            tools:text="07 May 2020"
+            app:layout_constraintBottom_toBottomOf="@+id/img_calender"
+            app:layout_constraintStart_toEndOf="@+id/img_calender"
+            app:layout_constraintTop_toTopOf="@+id/img_calender" />
+
+        <ImageView
+            android:id="@+id/img_clock"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_width="@dimen/_15sdp"
+            android:src="@drawable/ic_clock"
+            app:layout_constraintEnd_toStartOf="@+id/txtGameDetailTime"
+            app:layout_constraintStart_toEndOf="@+id/txtGameDetailDate"
+            app:layout_constraintTop_toBottomOf="@+id/starts_at"
+            android:contentDescription="@null" />
+
+        <TextView
+            style="@style/game_recycler_detail_textview_style_blue_color"
+            android:id="@+id/txtGameDetailTime"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            tools:text="07 May 2020"
+            app:layout_constraintBottom_toBottomOf="@+id/img_clock"
+            app:layout_constraintStart_toEndOf="@+id/img_clock"
+            app:layout_constraintTop_toTopOf="@+id/img_clock" />
+
+        <TextView
+            style="@style/button_view_style_textview"
+            android:background="@drawable/purple_rounded_rectangle_stroke"
+            android:gravity="center"
+            android:id="@+id/viewTicket"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="@dimen/_80sdp"
+            android:text="@string/view_ticket"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@+id/txtGameDetailTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtGameDetailTime"
+            app:layout_constraintTop_toTopOf="@+id/txtGameDetailTime" />
+
+        <View
+            android:background="@color/color_greyout_textview"
+            android:id="@+id/line_separator"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_width="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewTicket" />
+
+        <TextView
+            style="@style/game_recycler_heading_textview_style"
+            android:id="@+id/txt_winning_label"
+            android:drawableStart="@drawable/ic_thumb_up_golden_24dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:text="@string/no_prizes_won"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line_separator" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

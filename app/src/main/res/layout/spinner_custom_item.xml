@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckedTextView  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:textSize="@dimen/_13ssp"
+    android:textColor="@color/color_detail_textview_login_signup"
+    android:textStyle="bold"
+    android:fontFamily="@font/montserrat_regular"
+    android:singleLine="true"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_30sdp"
+    android:layout_margin="@dimen/_3sdp"
+    android:text="everyday"
+    android:ellipsize="marquee"
+    android:background="@android:color/white"
+    android:gravity="center"
+    android:textAlignment="inherit"/>

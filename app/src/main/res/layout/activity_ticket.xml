@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rootView">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@null"
+            android:scaleType="fitXY"
+            android:src="@drawable/setting_screen_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/img_back_press"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_back_arrow"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/timer_cl"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/img_back_press">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:text="@string/game_starts_in"
+                    android:id="@+id/game_starts_in"
+                    style="@style/edit_profile_text_style"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/view1"
+                    app:layout_constraintTop_toBottomOf="@+id/game_starts_in"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:id="@+id/txtTimerDay"
+                    style="@style/timer_style"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/txtTimerDay"
+                    app:layout_constraintEnd_toEndOf="@+id/txtTimerDay"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTimerDay"
+                    android:text="@string/str_days"
+                    android:id="@+id/txtdays"
+                    style="@style/button_text_style"/>
+
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="0dp"
+                    android:id="@+id/view1"
+                    app:layout_constraintTop_toTopOf="@+id/txtTimerDay"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtdays"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/view2"
+                    android:background="@color/color_greyout_textview"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/view1"
+                    app:layout_constraintEnd_toStartOf="@+id/view2"
+                    app:layout_constraintTop_toBottomOf="@+id/game_starts_in"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:id="@+id/txtTimerHour"
+                    style="@style/timer_style"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/txtTimerHour"
+                    app:layout_constraintEnd_toEndOf="@+id/txtTimerHour"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTimerHour"
+                    android:text="@string/str_hours"
+                    android:id="@+id/txthours"
+                    style="@style/button_text_style"/>
+
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="0dp"
+                    android:id="@+id/view2"
+                    app:layout_constraintTop_toTopOf="@+id/txtTimerHour"
+                    app:layout_constraintBottom_toBottomOf="@+id/txthours"
+                    app:layout_constraintStart_toEndOf="@+id/view1"
+                    app:layout_constraintEnd_toStartOf="@+id/view3"
+                    android:background="@color/color_greyout_textview"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/view2"
+                    app:layout_constraintEnd_toStartOf="@+id/view3"
+                    app:layout_constraintTop_toBottomOf="@+id/game_starts_in"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:id="@+id/txtTimerMinutes"
+                    style="@style/timer_style"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/txtTimerMinutes"
+                    app:layout_constraintEnd_toEndOf="@+id/txtTimerMinutes"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTimerMinutes"
+                    android:text="@string/str_minutes"
+                    android:id="@+id/txtminutes"
+                    style="@style/button_text_style"/>
+                <View
+                    android:layout_width="@dimen/_1sdp"
+                    android:layout_height="0dp"
+                    android:id="@+id/view3"
+                    app:layout_constraintTop_toTopOf="@+id/txtTimerMinutes"
+                    app:layout_constraintBottom_toBottomOf="@+id/txtminutes"
+                    app:layout_constraintStart_toEndOf="@+id/view2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@color/color_greyout_textview"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toEndOf="@+id/view3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/game_starts_in"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:id="@+id/txtTimerSeconds"
+                    style="@style/timer_style"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/txtTimerSeconds"
+                    app:layout_constraintEnd_toEndOf="@+id/txtTimerSeconds"
+                    app:layout_constraintTop_toBottomOf="@+id/txtTimerSeconds"
+                    android:text="@string/str_seconds"
+                    android:id="@+id/txtseconds"
+                    style="@style/button_text_style"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/declared_number_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/timer_cl"
+                android:layout_marginTop="@dimen/_15sdp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ticket_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/declared_number_recycler"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

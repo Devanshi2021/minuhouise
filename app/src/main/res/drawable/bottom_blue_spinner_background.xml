@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="@dimen/_minus2sdp" android:left="@dimen/_minus2sdp" android:right="@dimen/_minus2sdp">
+        <shape android:shape="rectangle">
+            <stroke android:width="2dip" android:color="@color/color_detail_textview_login_signup" />
+            <solid android:color="@color/color_transparent" />
+        </shape>
+    </item>
+</layer-list>

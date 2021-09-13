@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtTicketID"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_26sdp"
+        app:layout_constraintStart_toStartOf="@+id/gridView"
+        app:layout_constraintEnd_toEndOf="@+id/gridView"
+        app:layout_constraintTop_toTopOf="@+id/gridView"
+        app:layout_constraintBottom_toTopOf="@+id/gridView"
+        android:text="@string/ticket_no"
+        android:gravity="center"
+        android:elevation="@dimen/_2sdp"
+        style="@style/button_style_textview"
+        android:background="@drawable/pink_gradient_button_bg"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="@drawable/ticket_blue_gradient_background"
+        android:paddingHorizontal="@dimen/_20sdp"
+        android:paddingVertical="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ticket_status"
+        style="@style/button_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/middle_cl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ticket_status">
+
+        <Button
+            android:id="@+id/btn_saveTicket"
+            android:layout_width="@dimen/_96sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:text="@string/save_ticket"
+            android:layout_marginEnd="@dimen/_10sdp"
+            style="@style/button_style_textview"
+            android:background="@drawable/pink_gradient_button_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_claim"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btn_claim"
+            android:layout_width="@dimen/_96sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:text="@string/claim"
+            android:background="@drawable/pink_gradient_button_bg"
+            style="@style/button_style_textview"
+            app:layout_constraintStart_toEndOf="@+id/btn_saveTicket"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

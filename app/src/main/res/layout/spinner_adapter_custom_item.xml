@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    android:textSize="@dimen/_13ssp"
+    android:textColor="@color/color_detail_textview_login_signup"
+    android:textStyle="bold"
+    android:fontFamily="@font/montserrat_regular"
+    android:singleLine="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:ellipsize="marquee"
+    android:gravity="center"
+    android:background="@drawable/bottom_blue_spinner_background"
+    android:textAlignment="inherit"/>

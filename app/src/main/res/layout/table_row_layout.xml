@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingHorizontal="@dimen/_6sdp"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/category"
+        android:gravity="center"
+        android:padding="@dimen/_3sdp"
+        android:text="@string/category"
+        android:layout_weight="0.5"
+        android:background="@drawable/table_row_border"
+        style="@style/winner_table_row_style"/>
+
+    <TextView
+        android:id="@+id/winner_name"
+        android:gravity="center"
+        android:layout_weight="0.5"
+        android:text="@string/winner"
+        android:padding="@dimen/_3sdp"
+        android:background="@drawable/table_row_border"
+        style="@style/winner_table_row_style"/>
+</TableRow>

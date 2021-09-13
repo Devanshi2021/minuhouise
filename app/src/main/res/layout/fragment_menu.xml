@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ui.menu.MenuFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/_102sdp"
+            android:layout_height="@dimen/_102sdp"
+            android:id="@+id/imgprofile_image"
+            app:layout_constraintTop_toTopOf="@+id/profile_detail_cl"
+            app:layout_constraintBottom_toTopOf="@+id/profile_detail_cl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/default_profile_bg"
+            android:src="@drawable/default_profile_icon"
+            android:padding="@dimen/_7sdp"
+            android:elevation="@dimen/_2sdp"
+            android:contentDescription="@null"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="@dimen/_242sdp"
+            android:layout_height="@dimen/_285sdp"
+            android:id="@+id/profile_detail_cl"
+            android:background="@drawable/menu_detail_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_19sdp"
+                android:layout_height="@dimen/_19sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:src="@drawable/ic_edit"
+                android:id="@+id/imgEdit"
+                android:contentDescription="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_66sdp"
+                style="@style/menu_detail_user_detail"
+                android:id="@+id/user_name_detail"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_name_detail"
+                style="@style/menu_detail_user_detail"
+                android:id="@+id/user_email"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_81ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_email"
+                app:layout_constraintEnd_toStartOf="@+id/wallet_detail_cl"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:background="@drawable/menu_blue_rounded_bg"
+                android:id="@+id/winner_detail_cl">
+                
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_34sdp"
+                    android:layout_marginHorizontal="@dimen/_18sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txtSupport"
+                    android:src="@drawable/ic_whatsapp"
+                    android:id="@+id/whatsapp"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:id="@+id/txtSupport"
+                    style="@style/currency_digit_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:gravity="center"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/whatsapp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Support" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_81ssp"
+                app:layout_constraintStart_toEndOf="@+id/winner_detail_cl"
+                app:layout_constraintTop_toBottomOf="@+id/user_email"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="@dimen/_3sdp"
+                android:background="@drawable/menu_blue_rounded_bg"
+                android:layout_marginTop="@dimen/_18sdp"
+                android:id="@+id/wallet_detail_cl">
+
+                <ImageView
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_34sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginHorizontal="@dimen/_18sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/wallet_side_textview"
+                    android:src="@drawable/ic_coin"
+                    android:id="@+id/wallet_img"
+                    android:contentDescription="@null"/>
+
+                <TextView
+                    android:id="@+id/wallet_side_textview"
+                    style="@style/currency_digit_textview_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:gravity="center"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/wallet_img"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="@string/str_zero" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/img_htp"
+            app:layout_constraintStart_toStartOf="@+id/txt_htp"
+            app:layout_constraintEnd_toEndOf="@+id/txt_htp"
+            app:layout_constraintTop_toBottomOf="@+id/profile_detail_cl"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_detail_cl"
+            android:src="@drawable/ic_profile_info"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:layout_width="@dimen/_82sdp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_htp"
+            android:text="@string/how_to_play"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@+id/profile_detail_cl"
+            app:layout_constraintEnd_toStartOf="@+id/txt_settings"
+            app:layout_constraintTop_toBottomOf="@+id/img_htp"
+            style="@style/detail_edittext_style"
+            android:layout_marginTop="@dimen/_2sdp"/>
+
+        <ImageView
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/img_setting"
+            app:layout_constraintStart_toStartOf="@+id/txt_settings"
+            app:layout_constraintEnd_toEndOf="@+id/txt_settings"
+            app:layout_constraintTop_toBottomOf="@+id/profile_detail_cl"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_detail_cl"
+            android:src="@drawable/ic_profile_setting"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:layout_width="@dimen/_82sdp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_settings"
+            android:text="@string/change_npassword"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/txt_htp"
+            app:layout_constraintEnd_toStartOf="@+id/txt_more"
+            app:layout_constraintTop_toBottomOf="@+id/img_setting"
+            style="@style/detail_edittext_style"
+            android:layout_marginTop="@dimen/_2sdp"/>
+
+        <ImageView
+            android:visibility="gone"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/img_more"
+            app:layout_constraintStart_toStartOf="@+id/txt_more"
+            app:layout_constraintEnd_toEndOf="@+id/txt_more"
+            app:layout_constraintTop_toBottomOf="@+id/profile_detail_cl"
+            app:layout_constraintBottom_toBottomOf="@+id/profile_detail_cl"
+            android:src="@drawable/ic_profile_menu"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="@dimen/_82sdp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_more"
+            android:text="@string/more"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@+id/txt_settings"
+            app:layout_constraintEnd_toEndOf="@+id/profile_detail_cl"
+            app:layout_constraintTop_toBottomOf="@+id/img_more"
+            style="@style/detail_edittext_style"
+            android:layout_marginTop="@dimen/_2sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_version"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_htp"
+            style="@style/detail_textview_style"
+            android:layout_marginTop="@dimen/_25sdp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
